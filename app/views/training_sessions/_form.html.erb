@@ -1,0 +1,27 @@
+<% content_for :form do %>
+
+<%= simple_form_for(@trainingsession) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%# <%= f.input :trainer_id,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "#{@traininsession.trainer}" }%> %>
+    <%= f.input :client_id,
+                required: true,
+                input_html: { autocomplete: "client" } %>
+    <%= f.input :start_time,
+                required: true %>
+    <%= f.input :end_time,
+                required: true %>
+    <%= f.input :notes
+                input_html: { autocomplete: "notes" } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Create Training Session" %>
+  </div>
+<% end %>
+
+<%end%>

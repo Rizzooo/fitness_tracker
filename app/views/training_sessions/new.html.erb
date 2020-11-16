@@ -1,0 +1,10 @@
+<h2> New Training Session </h2>
+
+<%= simple_form_for @trainingsession do |f| %>
+  <%= f.association :trainer %>
+  <%= f.association :client %>
+  <%= f.input :start_time, :as => :datetime %>
+  <%= f.input :end_time, :as => :datetime %>
+  <%= f.input :notes %>
+  <%= f.button :submit %>
+<% end %>
